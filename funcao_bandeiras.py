@@ -18,8 +18,6 @@ def desenha_retangulo(x, y, larg, alt, color):
     t.end_fill()
 
 
-
-
 def desenha_franca():
     desenha_retangulo(-200, 200, 50, 150, "#012153") #color picker extension usado(colorzilla)
     desenha_retangulo(-150, 200, 50, 150, "white")
@@ -481,5 +479,27 @@ desenha_panama()
 
 sleep(1)
 t.clear()
+
+
+banco_de_bandeiras = {
+    "franca": desenha_franca,
+    "camaroes": desenha_camaroes,
+    "canada": desenha_canada,
+    "chile": desenha_chile,
+    "comores": desenhar_comores,
+    "georgia": desenha_georgia,
+    "irlanda": desenha_irlanda,
+    "israel": desenha_israel,
+    "italia": desenha_italia,
+    "monaco": desenha_monaco,
+    "polonia": desenha_polonia,
+    "nigeria": desenha_nigeria,
+    "panama": desenha_panama,
+}
+
+
+
+funcao_da_bandeira = banco_de_bandeiras[textinput("Menu de Bandeiras", "Qual bandeira você quer desenhar?\n(Ex: franca, camaroes, canada, chile, comores, georgia, irlanda, israel, italia, monaco, polonia, nigeria, panama)")]
+funcao_da_bandeira()
 
 mainloop()
