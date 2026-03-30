@@ -341,4 +341,145 @@ desenha_georgia()
 sleep(1)
 t.clear()
 
+def desenha_irlanda():
+    desenha_retangulo_cam(-150, -450, 300, -300, "seagreen")
+    desenha_retangulo_cam(150, -150, 300, -300, "white")
+    desenha_retangulo_cam(450, 150, 300, -300, "orange")
+    formatacao()
+
+desenha_irlanda()
+
+sleep(1)
+t.clear()
+
+def estrela_davi(x, y, size, color):
+    t.pu()
+    t.goto(x,y)
+    t.pd()
+
+    t.color(color)
+    t.pensize(10)
+
+    for _ in range(3):
+        t.fd(size)
+        t.lt(120) 
+    t.pensize(1)
+
+def retangulo_israel(x,y,x2,y2,color):
+    t.pu()
+    t.goto(x,y)
+    t.pd()
+    t.color("steelblue")
+    t.begin_fill()
+    t.goto(x2,y)
+    t.goto(x2,y2)
+    t.goto(x,y2)
+    t.goto(x,y)
+    t.end_fill()
+
+def desenha_israel():
+    estrela_davi(-100,-50,200,"steelblue")
+    t.lt(180)
+    estrela_davi(100,50,200,"steelblue")
+    retangulo_israel(-450,190,450,260,"steelblue")
+    retangulo_israel(-450,-190,450,-260,"steelblue")
+    formatacao()
+
+desenha_israel()
+
+sleep(1)
+t.clear()
+
+def desenha_italia():
+    desenha_retangulo_cam(-150, -450, 300, -300, "seagreen")
+    desenha_retangulo_cam(150, -150, 300, -300, "white")
+    desenha_retangulo_cam(450, 150, 300, -300, "red")
+    formatacao()
+
+desenha_italia()
+
+sleep(1)
+t.clear()
+
+def retangulo_monaco(x, y, x2, y2, color):
+    t.pu()
+    t.goto(x, y)
+    t.pd()
+    t.color(color)
+    t.begin_fill()
+    t.goto(x2, y)
+    t.goto(x2, y2)
+    t.goto(x, y2)
+    t.goto(x, y)
+    t.end_fill()
+
+def desenha_monaco():
+    retangulo_monaco(-450,300,450,-300,"firebrick")
+    retangulo_monaco(-450,0,450,-300,"white")
+    formatacao()
+
+desenha_monaco()
+
+sleep(1)
+t.clear()
+
+def desenha_polonia():
+    retangulo_monaco(-450,300,450,-300,"white")
+    retangulo_monaco(-450,0,450,-300,"firebrick")
+    formatacao()
+
+desenha_polonia()
+
+sleep(1)
+t.clear()
+
+def desenha_nigeria():
+    desenha_retangulo_cam(-150, -450, 300, -300, "seagreen")
+    desenha_retangulo_cam(150, -150, 300, -300, "white")
+    desenha_retangulo_cam(450, 150, 300, -300, "seagreen")
+    formatacao()
+
+desenha_nigeria()
+
+sleep(1)
+t.clear()
+
+def desenha_quadrado_panama(x,y,z,color):
+    t.pu()
+    t.goto(x,y)
+    t.pd()
+    t.color(color)
+    t.begin_fill()
+    t.goto(y,y)
+    t.goto(y,z)
+    t.goto(x,z)
+    t.goto(x,y)
+    t.end_fill()
+
+def estrela_panama(x,y,size,color):
+    t.setheading(0)
+    t.pu()
+    t.goto(x,y)
+    t.pd()
+    t.color(color)
+    t.begin_fill()
+    for i in range(5):
+        t.fd(size)
+        t.lt(72)
+        t.fd(size)
+        t.rt(144)
+    t.end_fill()
+
+def desenha_panama():
+    desenha_quadrado_panama(-450,0,-300,"steelblue")
+    desenha_quadrado_panama(450,0,300,"firebrick")
+    estrela_panama(-325,185,70,"steelblue")
+    estrela_panama(135,-120,70,"firebrick")
+    formatacao()
+
+desenha_panama()
+
+sleep(1)
+t.clear()
+
 mainloop()
